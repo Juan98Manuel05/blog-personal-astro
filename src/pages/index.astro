@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Work from '../components/Work.astro';
+
+---
+
+<Layout title="Who I am.">
+	<main>
+		<h1>Who <span class="text-gradient">I am</span></h1>
+
+		<h3> Juan Manuel Camacho Naranjo</h3>
+		<p class="who-iam"> 
+			Soy desarrollador de software apasionado, me encanta la técnologia desde muy pequeño, he realizado esta
+			bella labor desde los 18 años, soy Tecnólogo en Desarrollo de Software e Ingeniero en Informartica.
+		</p>
+
+		<h3> Experiencia laboral: </h3>
+		
+		<ul role="list" class="link-work-grid">
+			<Work
+				currently="Currently"
+				href="https://www.appspringtech.com/"
+				charge="Full Stack Developer — Engineer"
+				title="Appspring Technologies"
+				body="Desarrollo y customizacion de diferentes proyectos, lider de equipo de desarrollo, Planeación e Implementación de proyectos, Elaboracion de documentación, Tech Notes, Estructura de código, Mantenimiento de software, Administracion de Hosting (SSH), Metodologías agiles SCRUM"
+				tech="Front-End: React, Next, Vue, Nuxt, WordPress, Joomla, CSS3, jQuery, Bootstrap, HTML5, Django  Back-End: Node, PHP, Python, MySQL, PostgreSQL, APIRest, SOAP API, Linux Server."
+			/>
+			<Work
+				date="2020 - 2021 (1 año y 4 meses)"
+				href="https://agenciamanager.com/"
+				charge="Full Stack Developer — Engineer"
+				title="Agencia Manager"
+				body="Desarrollo y customizacion de diferentes proyectos web, lider de equipo de desarrollo, Planeación e Implementación de proyectos, Mantenimiento de software, Administracion de Hosting mediante(SSH)"
+				tech="Front-End: Vue, Nuxt, WordPress, CSS3, Bootstrap, HTML5, Back-End: Node, PHP, MySQL, APIRest."
+			
+			/>
+			<Work
+				date="2018 - 2020 (2 años y 7 meses)"
+				href="https://web.colpegasus.com/"
+				charge="Full Stack Developer — Technical support"
+				title="Pegasus Software"
+				body="Desarrollo y Mantenimiento Web, Desarrollo de modulos y actualizaciones, Lider de Soporte Técnico, Documentación, Construccion de sitios web institucionales, capacitaciones de software"
+				tech="Front-End: JavaScript, jQuery, HTML5, CSS3, Bootstrap, Back-End: PHP, MySQL, Redis"
+			/>
+		</ul>
+
+		<p class="instructions">
+			Esto resume mi <strong> trayectoria profesional</strong> en las diferentes empresas que he trabajado, en cada empresa he avanzado considerablemente
+			he aprendido muchas cosas en cada una de ellas, pero siempre estaré en búsqueda de ese éxtra que me haga sér mejor
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href=""
+				title="Estudios"
+				body="Mis estudios han sido esa parte fundamental de mi crecimiento. 📖"
+			/>
+			<Card
+				href=""
+				title="Cursos o Certificaciones"
+				body="Extras a lo largo de mi carrera que me han ayudado a seguir adelante. 📜"
+			/>
+			<Card
+				href=""
+				title="Pasatiempos"
+				body="Momentos en los que me desconecto de todo para solo disfrutar un poco de lo que me gusta. 📱"
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: left;
+		margin-bottom: 1em;
+	}
+	.who-iam{
+		margin-bottom: 50px;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+
+	.link-work-grid {
+		display: grid;
+		gap: 2rem;
+		padding: 30px 10px;
+	}
+
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>

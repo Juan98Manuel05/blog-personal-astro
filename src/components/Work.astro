@@ -1,0 +1,89 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+    charge: string;
+    tech: string;
+}
+
+const{ 
+    href, 
+    title, 
+    body, 
+    charge,
+    currently,
+    tech,
+    date
+} = Astro.props
+---
+
+<li class="link-card">
+	<a href={href} target="_blank">
+        <span class="icon-card">💼</span>
+        { date && <span class="date-work">{date}</span> }
+        { currently && <span class="currently-work">{currently}</span> }
+        
+
+            <h2>
+                {title}
+                <span>&rarr;</span>
+            </h2>
+        <h4> 📌 {charge}</h4>
+        <p class="body-description">
+            {body}
+        </p>
+        <span class="technologies"> <strong>💻 Tecnólogias:</strong> <br>{ tech } </span>
+	</a>
+</li>
+
+<style>
+    .currently-work{
+        font-size: 12px;
+        padding: 3px 10px;
+        border: 1px solid greenyellow;
+        border-radius: 20px;
+        color: greenyellow
+    }
+
+    .date-work{
+        font-size: 14px;
+        color: #bfbfbf;
+    }
+    .icon-card{
+        font-size: 21px !important;
+    }
+    .link-card{
+        list-style-type: none;
+        padding-top: 10px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+        border-left: 1px solid rgb(255, 255, 255);
+        background-color: #2b2f393b;
+    }
+    .body-description{
+        margin-bottom: 15px;
+    }
+    .link-card a{
+        color: white;
+        text-decoration: none;
+    }
+    .link-card a h2 {
+        font-size: 21px;
+        margin: 5px 0;
+    }
+
+    .link-card h4 {
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+    .link-card p{
+        font-size: 16px;
+    }
+    .technologies{
+        font-size: 15px;
+    }
+
+</style>
