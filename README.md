@@ -1,6 +1,6 @@
 # Personal Blog with Astro: Basics
 
-My persona blog under construction 🚧
+My personal blog under construction 🚧
 
 If you want to follow it closely I have it displayed in the following link:
 
