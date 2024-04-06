@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card2 from '../components/Card2.astro';
+
+---
+
+<Layout title="Estudies">
+	<main>
+        <!-- <h1 class="text-studies">My <span class="text-green">Estudies</span> and <span class="text-purple">Proyects</span></h1> -->
+        <div class="container-studies">
+            <div class="container-title">
+                <div class="container-svg-return">
+                    <a href="/index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm28.9-143.6L209.4 288H392c13.3 0 24-10.7 24-24v-16c0-13.3-10.7-24-24-24H209.4l75.5-72.4c9.7-9.3 9.9-24.8 .4-34.3l-11-10.9c-9.4-9.4-24.6-9.4-33.9 0L107.7 239c-9.4 9.4-9.4 24.6 0 33.9l132.7 132.7c9.4 9.4 24.6 9.4 33.9 0l11-10.9c9.5-9.5 9.3-25-.4-34.3z"/></svg>
+                    </a>
+                </div> 
+                <h3 class="subtitle">Universidad</h3>
+                <h1 class="title">Estudios profesionales:</h1>
+            </div>
+            <div class="">
+                <Card2 
+                    Period="2020 - 2022"
+                    Title="Ingeniero en informatica"
+                    College="Corporación Universitaria Autonoma de Nariño"
+                />
+                <Card2 
+                    Period="2016 - 2019"
+                    Title="Tecnología en Desarrollo de Software"
+                    College="Corporación Universitaria Minuto de Dios"
+                />
+            </div>
+        </div>
+	</main>
+</Layout>
+
+<style>
+    main {
+		margin: auto;
+        margin-top: 30px;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+    .subtitle{
+        color: #999999;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .title{
+        margin-top: -5px
+    }
+
+    .container-svg-return svg{
+        width: 30px;
+    }
+
+    .text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+
+</style>

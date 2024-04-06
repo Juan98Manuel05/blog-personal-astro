@@ -1,0 +1,98 @@
+---
+interface Props {
+	Title: string;
+	College: string;
+    Period: string;
+}
+
+const { Title, College, Period } = Astro.props;
+---
+
+<div class="card">
+    <div class="container-info-card">
+        <div class="container-image">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" fill="white"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M622.3 153.2L343.4 67.5c-15.2-4.7-31.6-4.7-46.8 0L17.7 153.2c-23.5 7.2-23.5 38.4 0 45.6l48.6 14.9c-10.7 13.2-17.2 29.3-17.9 46.9C38.8 266.2 32 276.1 32 288c0 10.8 5.7 19.9 13.9 25.7L20.3 428.5C18.1 438.5 25.7 448 35.9 448h56.1c10.2 0 17.8-9.5 15.6-19.5L82.1 313.7C90.3 307.9 96 298.8 96 288c0-11.6-6.5-21.3-15.7-26.9 .8-15 8.4-28.3 20.7-36.7L296.6 284.5c9.1 2.8 26.4 6.3 46.8 0l279-85.7c23.6-7.2 23.6-38.4 0-45.6zM352.8 315.1c-28.5 8.8-52.8 3.9-65.6 0l-145-44.6L128 384c0 35.4 86 64 192 64s192-28.7 192-64l-14.2-113.5-145 44.6z"/></svg>
+        </div>
+        <div class="container-information">
+            <div class="container-date-studies">
+            </div>
+            <div class="bachelor-degree">
+                <span> Titulo obtenido: ({Period})</span>
+                <h3 class="margin-0"> {Title} </h3>
+            </div>
+            <div class="college">
+                <h5 class="margin-0 university"> {College} </h5>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .margin-0{
+        margin: 0px;
+    }
+
+    /* card principal */
+    .card{
+        border: 1px solid #2f2f2f;
+        border-radius: 15px;
+        transition: 300ms;
+        margin-bottom: 20px;
+    }
+    .card:hover{
+        border: 1px solid rgba(173, 255, 47, 0.3);
+        box-shadow: rgba(173, 255, 47, 0.1) 0px 5px 40px -10px;
+        cursor: pointer;
+    }
+
+    /* containers to each information college */
+    .card .container-info-card{
+        display: flex;
+        flex-direction: row;
+        padding: 15px;
+    }
+    .card .container-info-card .container-image{
+        padding:30px;
+    }
+    .card .container-info-card .container-image svg{
+        width: 60px;
+    }
+    .card .container-info-card .container-information{
+        width: 100%;
+        padding-left: 2rem;
+    }
+    .card .university{
+        font-weight: 500;
+    }
+    .container-date-studies .date{
+        font-size: 14px;
+    }
+    .container-image{
+        display: flex;
+        background-color: #1a1a1a;
+        border-radius: 10px;
+    }
+
+    /* container bachelor degree */
+    .bachelor-degree span{
+        font-size: 14px;
+        color: darkgray;
+    }
+    .bachelor-degree h3{
+        margin-top: -5px;
+        font-size: 30px;
+    }
+
+
+    .text-beige{
+        color: beige;
+    }
+    .text-studies{
+        font-size: 4rem;
+    }
+    .text-green{
+        color: rgb(119, 255, 3)
+    }
+     .text-purple{
+        color: rgb(171, 33, 255)
+    }
+</style>
