@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card2 from '../components/Card2.astro';
+import Knowledge from '../components/KnowLedge.astro';
+
 
 ---
 
@@ -36,7 +38,7 @@ import Card2 from '../components/Card2.astro';
                 </div>
                 <div class="amount-experience text-default">
                     <h3> Years of experience</h3>
-                    <p style="font-size: 75px;">
+                    <p style="font-size: 75px; font-weight: bold;">
                         5
                     </p>
                 </div>
@@ -47,6 +49,15 @@ import Card2 from '../components/Card2.astro';
                         > Web Developmente <br>
                         > Web Designer (Hobbie)
                     </p>
+                </div>
+            </div>
+
+            <div class="back-page">
+                <h3 class="subtitle" style="color: gray;">Conocimientos</h3>
+            </div>
+            <div class="container-knowledge">
+                <div class="container-img">
+                    <Knowledge />
                 </div>
             </div>
 
@@ -126,6 +137,10 @@ import Card2 from '../components/Card2.astro';
         box-shadow: rgba(172, 255, 47, 0.322) 0px 5px 50px -10px;
     }
 
+    .info-personal div:nth-child(2n + 1){
+        background-color: #0a0a0a;
+    }
+
     .info-personal div:nth-child(2n + 1):hover{
         border: 1px solid rgba(173, 255, 47, 0.5);
         background-color: #7eff0e27;
@@ -146,7 +161,7 @@ import Card2 from '../components/Card2.astro';
 
     .amount-experience{
         text-align: center;
-        transform: scale(1.08);
+        transform: scale(1.15);
         background: #7eff0e;
         color: black;
     }
@@ -172,6 +187,7 @@ import Card2 from '../components/Card2.astro';
         }
         .amount-experience{
             align-content: center;
+            transform: none;
         }
         .text-default p{
             font-size: 18px;
@@ -249,27 +265,4 @@ import Card2 from '../components/Card2.astro';
             transform: none;
         }
     }
-
-
-    /* .subtitle{
-        color: #999999;
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-    .title{
-        margin-top: -5px
-    }
-
-    .container-svg-return svg{
-        width: 30px;
-    }
-
-    .text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	} */
-
 </style>
