@@ -17,10 +17,8 @@ const { Title, College, Period } = Astro.props;
             <div class="container-date-studies">
             </div>
             <div class="bachelor-degree">
-                <span> Titulo obtenido: ({Period})</span>
+                <span> Periodo: ({Period})</span>
                 <h3 class="margin-0"> {Title} </h3>
-            </div>
-            <div class="college">
                 <h5 class="margin-0 university"> {College} </h5>
             </div>
         </div>
@@ -35,13 +33,16 @@ const { Title, College, Period } = Astro.props;
     .card{
         border: 1px solid #2f2f2f;
         border-radius: 15px;
-        transition: 300ms;
+        transition: 500ms;
         margin-bottom: 20px;
+        margin-right: 18px;
+        width: 48.33%;
+        background-color: #0a0a0a;
     }
     .card:hover{
-        border: 1px solid rgba(173, 255, 47, 0.3);
-        box-shadow: rgba(173, 255, 47, 0.1) 0px 5px 40px -10px;
-        cursor: pointer;
+        border: 1px solid rgba(173, 255, 47, 0.5);
+        background-color: #7eff0e27;
+        color: white;
     }
 
     /* containers to each information college */
@@ -50,15 +51,15 @@ const { Title, College, Period } = Astro.props;
         flex-direction: row;
         padding: 15px;
     }
-    .card .container-info-card .container-image{
+    .container-image{
         padding:30px;
     }
-    .card .container-info-card .container-image svg{
+    .container-image svg{
         width: 60px;
     }
-    .card .container-info-card .container-information{
+    .container-information{
         width: 100%;
-        padding-left: 2rem;
+        padding-left: 12px;
     }
     .card .university{
         font-weight: 500;
@@ -92,7 +93,63 @@ const { Title, College, Period } = Astro.props;
     .text-green{
         color: rgb(119, 255, 3)
     }
-     .text-purple{
+    .text-purple{
         color: rgb(171, 33, 255)
     }
+
+    @media screen and (max-width: 1024px){
+        .container-information{
+            padding: 0px;
+        }
+        .container-info-card{
+            display: block !important;
+        }
+        .container-image{
+            justify-content: center;
+        }
+        .bachelor-degree h3{
+            line-height: normal;
+            font-size: 28px;
+        }
+        .card{
+            margin-right: 17px;
+            width: 47.33%;
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        .container-info-card{
+            display: block !important;
+        }
+        .container-image{
+            justify-content: center;
+        }
+        .bachelor-degree h3{
+            line-height: normal;
+            font-size: 28px;
+        }
+        .card{
+            margin-right: 17px;
+            width: 47.33%;
+        }
+    }
+
+    @media screen and (max-width: 425px){
+        .container-image{
+            display: none;
+        }
+        .card{
+            width: 100%;
+            margin-right: 0;
+            padding: 20px;
+        }
+        .container-info-card{
+            padding: 0px !important;
+        }
+        .bachelor-degree h3{
+            line-height: normal;
+            font-size: 25px;
+        }
+    }
+    
 </style>
