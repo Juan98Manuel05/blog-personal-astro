@@ -1,0 +1,35 @@
+---
+import Cardproject from '../components/CardProjects.astro';
+
+interface Props {
+    items: Array<Object>
+}
+
+const { items } = Astro.props
+---
+
+<section>
+   
+    <h3 style="color: gray;">Proyectos:</h3>
+    <div class="container-projects">
+        {
+            items.map((item) => 
+                <Cardproject 
+                    title={item.title} 
+                    description={ item.description } 
+                    URL={item.URL} 
+                    technologies={item.technologies}  
+                />
+            )
+        }
+    </div>
+</section>
+
+<style>
+    .container-projects{
+        padding: 40px 0px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+</style>

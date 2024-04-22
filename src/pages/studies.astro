@@ -2,9 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Card2 from '../components/Card2.astro';
 import Knowledge from '../components/KnowLedge.astro';
-import Cardproject from '../components/CardProjects.astro';
-
-
+import Projects from '../components/Projects.astro';
+import projectsjson from '../resources/Projects.json';
 
 ---
 
@@ -65,18 +64,8 @@ import Cardproject from '../components/CardProjects.astro';
                 </div>
             </section>
 
-            <section>
-                <div class="back-page">
-                    <h3 class="subtitle" style="color: gray;">Proyectos:</h3>
-                </div>
-                <div class="container-projects">
-                    <Cardproject
-                        Title="My Local Coffees",
-                        Description='Comercio electronico construido con Wordpress, con pasarela de pagos Stripe e implementacion de funciones a la medida para una venta mas personalizada'
-                        URL='mylocalcoffees.com.png'
-                    />
-                </div>
-            </section>
+            <!-- Section projects -->
+            <Projects items={projectsjson}/>
 
             <section>
                 <div class="back-page">
@@ -96,8 +85,7 @@ import Cardproject from '../components/CardProjects.astro';
                         College="Corporación Universitaria Minuto de Dios"
                     />
                 </div>
-            </section>
-        </div>
+            </section>        </div>
 	</main>
 </Layout>
 
@@ -192,9 +180,6 @@ import Cardproject from '../components/CardProjects.astro';
         padding: 30px 0px;
     }
 
-    .container-projects{
-        padding: 40px 0px;
-    }
     @media screen and (max-width: 1024px){
         .info-personal div{
             width: 29%;
