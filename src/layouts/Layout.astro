@@ -44,8 +44,8 @@ const { title } = Astro.props;
 		/* background-image: linear-gradient(in hsl longer hue, blue, red); */
 		/* background-image: linear-gradient(0deg, blue, green 40%, red); */
 		/* background-image: linear-gradient(-33deg,  #0000 78%, #7eff0e 147%); */
-
 	}
+	
 	html {
 		font-family: system-ui, sans-serif;
 		background: #13151a;
@@ -64,5 +64,10 @@ const { title } = Astro.props;
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
+	}
+	@media screen and (max-width: 425px) {
+		body{
+			background-image: linear-gradient(-33deg, #000000 85%, #7eff0e 147.98%);
+		}
 	}
 </style>

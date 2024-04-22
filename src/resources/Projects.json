@@ -1,0 +1,26 @@
+[
+    {
+        "title": "My Local Coffees",
+        "description": "Comercio electronico construido con Wordpress, con pasarela de pagos Stripe e implementacion de funciones a la medida para una venta mas personalizada",
+        "URL": "mylocalcoffees.com.png",
+        "technologies": ["PHP","Stripe", "MySQL", "JavaScript", "jQuery", "CSS", "Git", "GitHub"]
+    },
+    {
+        "title": "RedCat Multiverse",
+        "description": "Diseño e implementacion de acuerdo a los mockups establecidos, usando React y frameworks como: React Parallax Mouse para efectos y animaciones, apoyo y colaboracion en equipo",
+        "URL": "redcatmultiverse.png",
+        "technologies": ["React","React Parallax Mouse", "SCSS", "Adobe XD", "Git", "GitHub"]
+    },
+    {
+        "title": "Phenotips",
+        "description": "Sitio construido con GulpJS, soporte y mantenimiento para el sitio web, desarrollo de modulos y secciones a la medida, requeridos por el cliente, mejoramiento del performance",
+        "URL": "phenotips.png",
+        "technologies": ["Gulp js","CSS3", "JavaScript", "Git", "GitHub"]
+    },
+    {
+        "title": "Universidad Sergio Arboleda",
+        "description": "Soporte y mantenimiento en todas las capas del aplicativo, mejoras de seguridad, analisis de riesgos, actualizaciones e implementacion de modulos a la medida.",
+        "URL": "usergioarboleda.png",
+        "technologies": ["WordPress", "Linux Server", "MySQL", "Script Bash", "CSS", "Bitbucket"]
+    }
+]
